@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.Tajil Irfana - Aspiring Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .section {
+            padding: 4rem 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                padding: 6rem 2rem;
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/95 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-slate-900">S.Tajil Irfana</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-2">
+                    <a href="#home"
+                        class="text-slate-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="#about"
+                        class="text-slate-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="#education"
+                        class="text-slate-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</a>
+                    <a href="#skills"
+                        class="text-slate-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                    <a href="#projects"
+                        class="text-slate-600 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                    <a href="#contact"
+                        class="bg-emerald-500 text-white hover:bg-emerald-600 px-4 py-2 rounded-full text-sm font-medium transition-colors shadow-sm">Contact</a>
+                </nav>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button"
+                        class="bg-slate-100 inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-emerald-600 hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i id="menu-open-icon" data-lucide="menu"></i>
+                        <i id="menu-close-icon" data-lucide="x" class="hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#education" class="mobile-nav-link">Education</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left reveal">
+                        <span class="text-emerald-600 font-semibold">Aspiring Software Developer</span>
+                        <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mt-2 mb-4">
+                            Hi, I'm <span class="text-emerald-500">S.Tajil Irfana</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 mb-8">
+                            A recent Computer Science graduate from Madurai, passionate about building beautiful and
+                            functional web applications. Eager to apply my skills in a challenging and growth-oriented
+                            environment.
+                        </p>
+                        <div class="flex justify-center md:justify-start space-x-4">
+                            <a href="#projects"
+                                class="bg-emerald-500 text-white font-medium py-3 px-6 rounded-full shadow-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105">View
+                                My Projects</a>
+                            <a href="resume.pdf" download
+                                class="bg-white text-emerald-600 font-medium py-3 px-6 rounded-full shadow-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105 border border-slate-200 flex items-center">
+                                <i data-lucide="download" class="w-5 h-5 mr-2"></i> Download Resume
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center reveal">
+                        <img src="WhatsApp Image 2025-09-12 at 2.06.52 PM.jpeg" alt="My name Name"
+                            class="rounded-full w-84 h-84 md:w-100 md:h-80 object-cover border- border-slate-100 shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section reveal">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">About Me</h2>
+                </div>
+                <div class="max-w-3xl mx-auto text-center text-lg text-slate-700 leading-relaxed">
+                    <p>I'm a recent graduate with a Bachelor of Engineering in Computer Science. My fascination with
+                        technology started in my school days, and it has since grown into a full-fledged passion for
+                        software development. I thrive on solving complex problems and enjoy the process of turning an
+                        idea into a tangible, high-quality product. I am a quick learner and a team player, excited to
+                        contribute my skills and learn from experienced professionals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ...existing code... -->
+        <!-- ...existing code... -->
+        <!-- Education Section -->
+        <section id="education" class="section bg-white reveal">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Education</h2>
+                </div>
+                <div class="max-w-2xl mx-auto bg-slate-50 p-8 rounded-xl shadow-md border border-slate-200 mb-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-900">Bachelor of Engineering - Computer Science
+                            </h3>
+                            <p class="font-medium text-emerald-600">Mangayarkarasi College of Engineering, Madurai</p>
+                            <p class="text-sm text-slate-500 mb-2">2022 - 2026</p>
+                            <p class="text-slate-600">Graduated with a CGPA of 8.6/10. Key coursework included Python,
+                                SQL, Flask, HTML and CSS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-2xl mx-auto bg-slate-50 p-8 rounded-xl shadow-md border border-slate-200 mb-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="book-open" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-900">Higher Secondary School Certificate</h3>
+                            <p class="font-medium text-emerald-600">Sitalaxmi Girls Higher Secondary School , Madurai
+                            </p>
+                            <p class="text-sm text-slate-500 mb-2">2020 - 2022</p>
+                            <p class="text-slate-600">Completed HSC with 73 %, majoring in Mathematics, Physics, and
+                                Computer Science.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-2xl mx-auto bg-slate-50 p-8 rounded-xl shadow-md border border-slate-200">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div
+                                class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                                <i data-lucide="school" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-900">Secondary School Leaving Certificate</h3>
+                            <p class="font-medium text-emerald-600">Sitalaxmi Girls Higher Secondary School , Madurai
+                            </p>
+                            <p class="text-sm text-slate-500 mb-2">2018 - 2020</p>
+                            <p class="text-slate-600">Completed SSLC with 63%, laying the foundation for further studies
+                                in science and Technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ...existing code... -->
+
+
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section reveal">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">My Technical Toolkit</h2>
+                    <p class="text-slate-600 mt-2">The technologies I've worked with during my studies and projects.</p>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-center">Languages</h3>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">HTML5 & CSS3</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-center">Frameworks & Libraries</h3>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <span class="skill-item">Numpy</span>
+                            <span class="skill-item">Pandas</span>
+                            <span class="skill-item">Matplotlib</span>
+                            <span class="skill-item">SeaBorn</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-center">Databases & Tools</h3>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">Pycharm</span>
+                            <span class="skill-item">Git & GitHub</span>
+                            <span class="skill-item">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-white reveal">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">My Projects</h2>
+                    <p class="text-slate-600 mt-2">Here are a few projects I've worked on.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1: Weather App -->
+                    <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 group flex flex-col">
+                        <img src="https://placehold.co/600x400/d1fae5/10b981?text=Weather+App" alt="Weather App"
+                            class="w-full h-52 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-semibold mb-2">Real-Time Weather App</h3>
+                            <p class="text-slate-600 mb-4 flex-grow">A web app that fetches and displays current weather
+                                data for any city using the OpenWeatherMap API. Features include a 5-day forecast and
+                                dynamic background changes.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">React</span><span class="tech-tag">API</span><span
+                                    class="tech-tag">CSS</span>
+                            </div>
+                            <div class="mt-auto flex space-x-4">
+                                <a href="#" class="project-link">Live Demo <i data-lucide="external-link"
+                                        class="w-4 h-4 ml-1"></i></a>
+                                <a href="#" class="project-link">GitHub <i data-lucide="github"
+                                        class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2: To-Do List App -->
+                    <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 group flex flex-col">
+                        <img src="https://placehold.co/600x400/d1fae5/10b981?text=Todo+App" alt="Todo App"
+                            class="w-full h-52 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-semibold mb-2">Interactive To-Do List</h3>
+                            <p class="text-slate-600 mb-4 flex-grow">A classic to-do list application with full CRUD
+                                functionality. Users can add, edit, delete, and mark tasks as complete. Data persists in
+                                local storage.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">JavaScript</span><span class="tech-tag">HTML</span><span
+                                    class="tech-tag">Tailwind</span>
+                            </div>
+                            <div class="mt-auto flex space-x-4">
+                                <a href="#" class="project-link">Live Demo <i data-lucide="external-link"
+                                        class="w-4 h-4 ml-1"></i></a>
+                                <a href="#" class="project-link">GitHub <i data-lucide="github"
+                                        class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3: Personal Blog -->
+                    <div class="bg-slate-50 rounded-lg overflow-hidden border border-slate-200 group flex flex-col">
+                        <img src="https://placehold.co/600x400/d1fae5/10b981?text=Blog+Platform" alt="Personal Blog"
+                            class="w-full h-52 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-semibold mb-2">Personal Blog Platform</h3>
+                            <p class="text-slate-600 mb-4 flex-grow">A simple, responsive blog built with Node.js and
+                                Express, using MongoDB for the database. Features include creating, editing, and
+                                deleting posts.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span
+                                    class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="mt-auto flex space-x-4">
+                                <a href="#" class="project-link">Live Demo <i data-lucide="external-link"
+                                        class="w-4 h-4 ml-1"></i></a>
+                                <a href="#" class="project-link">GitHub <i data-lucide="github"
+                                        class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section reveal">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Contact Me</h2>
+                </div>
+                <form id="contact-form"
+                    class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md border border-slate-200 mb-8">
+                    <input type="text" name="name" placeholder="Your Name" required
+                        class="w-full mb-4 px-4 py-2 border rounded-md" />
+                    <input type="email" name="email" placeholder="Your Email" required
+                        class="w-full mb-4 px-4 py-2 border rounded-md" />
+                    <textarea name="message" placeholder="Your Message" required
+                        class="w-full mb-4 px-4 py-2 border rounded-md"></textarea>
+                    <button type="submit"
+                        class="bg-emerald-500 text-white px-6 py-2 rounded-full font-medium hover:bg-emerald-600 transition">Send
+                        Message</button>
+                </form>
+                <div class="mt-6 flex justify-center space-x-4 text-gray-300">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"
+                        class="hover:text-emerald-600 transition duration-300">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://github.com/yourprofile" target="_blank"
+                        class="hover:text-emerald-600 transition duration-300">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank"
+                        class="hover:text-emerald-600 transition duration-300">
+                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            emailjs.init('05laHDnpX8DE1vGSj'); // e.g., user_xxxx
+
+            document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                emailjs.sendForm('Contact_data', 'template_dmxdfjk', this)
+                    .then(function () {
+                        alert('Message sent successfully!');
+                    }, function (error) {
+                        alert('Failed to send message. Try again later.');
+                    });
+            });
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-slate-500">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-slate-500 hover:text-emerald-600"><i data-lucide="linkedin"
+                        class="w-6 h-6"></i></a>
+                <a href="#" class="text-slate-500 hover:text-emerald-600"><i data-lucide="github"
+                        class="w-6 h-6"></i></a>
+                <a href="#" class="text-slate-500 hover:text-emerald-600"><i data-lucide="twitter"
+                        class="w-6 h-6"></i></a>
+            </div>
+            <p>&copy; 2025 S.Tajil irfana. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-open-icon');
+        const closeIcon = document.getElementById('menu-close-icon');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // CSS for dynamic elements
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .mobile-nav-link {
+                @apply text-slate-600 hover:bg-slate-100 hover:text-emerald-600 block px-3 py-2 rounded-md text-base font-medium;
+            }
+            .skill-item {
+                 @apply bg-emerald-100 text-emerald-800 font-medium px-4 py-2 rounded-full;
+            }
+            .tech-tag {
+                @apply bg-slate-200 text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+            }
+            .project-link {
+                @apply font-medium text-emerald-600 group-hover:underline flex items-center transition-colors;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Trigger on load
+    </script>
+</body>
+
+</html>
